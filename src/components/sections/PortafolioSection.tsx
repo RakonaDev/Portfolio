@@ -124,7 +124,7 @@ const projects: Record<string, Project[]> = {
       description:
         "Desarrollé el sitio web de RMM Consultoría END, una firma de asesoría enfocada en brindar servicios profesionales (jurídicos, contables, fiscales o afines). La plataforma cuenta tanto con una presencia pública clara como un potente sistema administrativo para gestionar productos y operaciones internas.",
       image: RMM,
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+      technologies: ["React", "Laravel", "Typescript", "Tailwind CSS", "MySQL"],
       githubUrl: "https://github.com/RakonaDev/rmm-frontend",
       liveUrl: "https://rmmconsultoriaend.com/",
       date: "2025",
