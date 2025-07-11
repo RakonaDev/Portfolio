@@ -52,7 +52,7 @@ const projects: Record<string, Project[]> = {
       id: "1",
       title: "Plantillas de LandingPage",
       description:
-        "Creación de 6 plantillas web para landingpage con animaciones de entrada",
+        "Como parte de mi trabajo en desarrollo web, diseñé y desarrollé seis plantillas de landing page modernas, responsivas y enfocadas en la conversión de leads.",
       image: Plantillas,
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       githubUrl: "https://github.com/RakonaDev/Plantillas_Landing_LogosPeru",
@@ -62,9 +62,9 @@ const projects: Record<string, Project[]> = {
     {
       id: "2",
       title: "Web Informativa - CayeGo",
-      description: "Portafolio personal con animaciones 3D y efectos interactivos usando Three.js.",
+      description: "Desarrollé una web responsive para una empresa de movilidad dentro de Lima, que permite a usuarios individuales y corporativos reservar traslados urbanos, servicios corporativos, traslados al aeropuerto y envío de paquetes.",
       image: Cayego,
-      technologies: ["Next.js", "Three.js", "Framer Motion", "GSAP"],
+      technologies: ["Next.js", "Tyepscript", "Framer Motion", "PHP"],
       githubUrl: "https://github.com/RakonaDev/Cayego",
       liveUrl: "https://cayego.com/",
       date: "2025",
@@ -73,7 +73,7 @@ const projects: Record<string, Project[]> = {
       id: "3",
       title: "Web Informativa - Zaitex",
       description:
-        "Aplicación de gestión de tareas con drag & drop, filtros avanzados y sincronización en tiempo real.",
+        "Desarrollé una web responsiva para una academia digital en Lima con cursos prácticos como Adobe Photoshop, Premiere Pro, AutoCAD, dibujo tradicional e ilustración digital. Implementé filtros de selección por región y modalidad",
       image: Zaitex,
       technologies: ["Angular", "Tailwindcss", "EmailJS"],
       githubUrl: "https://github.com/RakonaDev/ZaiTexFrontend",
@@ -89,7 +89,7 @@ const projects: Record<string, Project[]> = {
       id: "6",
       title: "Sistema de Facturación, Leasing y Préstamos",
       description:
-        "Plataforma completa de cursos online con sistema de pagos, progreso de estudiantes y panel de instructor.",
+        "Desarrollé una web corporativa y un módulo administrativo para una fintech registrada ante la SBS, especializada en cambio de divisas, facturación electrónica, leasing operativo y financiero, y préstamos personalizados.",
       image: Assessor,
       technologies: ["Next.js", "Prisma", "Node.js", "Express"],
       githubUrl: "https://github.com",
@@ -100,7 +100,7 @@ const projects: Record<string, Project[]> = {
       id: "7",
       title: "Sistema de Inventario",
       description:
-        "Red social para desarrolladores con sistema de posts, comentarios, seguimiento y chat en tiempo real.",
+        "Desarrollé un sistema completo de gestión de inventario para la empresa Logos Perú, orientado al control eficiente de productos, movimientos de stock, proveedores y compras. Este sistema es totalmente administrable, accesible desde web y optimizado para tareas logísticas internas.",
       image: SistemaInventario,
       technologies: ["Next.js", "Tailwindcss", "Laravel", "MySQL"],
       githubUrl: "https://github.com/RakonaDev/InventarioFrontend",
@@ -111,7 +111,7 @@ const projects: Record<string, Project[]> = {
       id: "9",
       title: "Tienda Virtual - Sistema",
       description:
-        "Red social para desarrolladores con sistema de posts, comentarios, seguimiento y chat en tiempo real.",
+        "Desarrollé un sistema integral para la gestión comercial y logística interna de una tienda virtual, orientado a pequeñas y medianas empresas que requieren controlar su inventario, ventas y operaciones internas desde un solo panel web.",
       image: TiendaVirtual,
       technologies: ["Next.js", "Node.js", "Prisma", "MySQL"],
       githubUrl: "https://github.com/RakonaDev/TiendaVirtual",
@@ -122,7 +122,7 @@ const projects: Record<string, Project[]> = {
       id: "8",
       title: "Landing Page Administrable",
       description:
-        "Red social para desarrolladores con sistema de posts, comentarios, seguimiento y chat en tiempo real.",
+        "Desarrollé el sitio web de RMM Consultoría END, una firma de asesoría enfocada en brindar servicios profesionales (jurídicos, contables, fiscales o afines). La plataforma cuenta tanto con una presencia pública clara como un potente sistema administrativo para gestionar productos y operaciones internas.",
       image: RMM,
       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
       githubUrl: "https://github.com/RakonaDev/rmm-frontend",
@@ -252,7 +252,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </div>
 
-        <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+        <p className="text-gray-300 mb-4 h-32 line-clamp-5 leading-relaxed">{project.description}</p>
 
         {/* Swiper para las tecnologías */}
         <div className="relative">

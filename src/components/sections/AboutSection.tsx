@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Calendar, MapPin, Briefcase, GraduationCap, Award, Coffee, Heart, Download } from "lucide-react"
+import { Calendar, MapPin, Briefcase, GraduationCap, Award, Heart, Download } from "lucide-react"
 import User from "../../assets/o.jpg"
 
 // Tipos para la experiencia laboral
@@ -253,21 +253,6 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Fun fact */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20"
-            >
-              <div className="flex items-center gap-3">
-                <Coffee className="text-primary" size={24} />
-                <p className="text-gray-300">
-                  <span className="text-primary font-semibold">Fun fact:</span> He tomado más de 2,000 tazas de café
-                  mientras programo y cada una ha valido la pena para crear código de calidad ☕
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
 
