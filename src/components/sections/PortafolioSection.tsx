@@ -32,6 +32,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/swiper-bundle.css'
 import { FreeMode } from "swiper/modules"
 import Swal from "sweetalert2"
+import axios from "axios"
+import { Global } from "../../helper/Global"
 
 // Tipos para los proyectos
 interface Project {
@@ -82,7 +84,7 @@ const projects: Record<string, Project[]> = {
     },
   ],
   backend: [
-    
+
   ],
   fullstack: [
     {
@@ -297,15 +299,29 @@ const ContactForm = () => {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     // Aquí manejarías el envío del formulario
     console.log("Form submitted:", formData)
-    Swal.fire({
-      title: "¡Gracias por tu mensaje!, Me contactaré contigo en breve",
-      icon: "success",
-      confirmButtonText: "Aceptar",
-    })
+    try {
+      const res = await axios.post(`${Global.api}/enviarCorreo`, formData)
+      console.log(res)
+      if (res.status === 200) {
+        Swal.fire({
+          title: "¡Gracias por tu mensaje!, Me contactaré contigo en breve",
+          icon: "success",
+          confirmButtonText: "Aceptar",
+        })
+      }
+
+    } catch (error) {
+      console.error(error)
+      Swal.fire({
+        title: "¡Ups! Algo ha ido mal",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      })
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -434,11 +450,10 @@ export default function PortfolioSections() {
                   <motion.button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`relative px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                      activeTab === tab.id
+                    className={`relative px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${activeTab === tab.id
                         ? "text-white bg-primary shadow-lg"
                         : "text-gray-400 hover:text-white hover:bg-secondary/30"
-                    }`}
+                      }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -458,7 +473,7 @@ export default function PortfolioSections() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className={`${projects[activeTab].length === 0 ? '' :'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-8`}
+              className={`${projects[activeTab].length === 0 ? '' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-8`}
             >
               {projects[activeTab].map((project) => (
                 <ProjectCard key={project.id} project={project} />
@@ -480,10 +495,10 @@ export default function PortfolioSections() {
         <div className="max-w-7xl mx-auto" id="contactos">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Hablemos de tu <span className="text-primary">Proyecto</span>
+              ¿Buscas un <span className="text-primary">Desarrollador Web</span> comprometido?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              ¿Tienes una idea increíble? Me encantaría escucharla y ayudarte a hacerla realidad.
+              Estoy abierto a nuevas oportunidades laborales. Si mi perfil se alinea con lo que tu empresa necesita, estaré encantado de conversar.
             </p>
           </motion.div>
 
