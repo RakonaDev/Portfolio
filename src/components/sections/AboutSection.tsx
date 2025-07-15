@@ -67,7 +67,7 @@ const personalInfo = {
   title: "Full Stack Developer",
   location: "Los Olivos - Lima, Perú",
   experience: "2 años",
-  projects: "10+",
+  projects: "5+",
   description: `Soy un desarrollador full stack apasionado por crear soluciones digitales innovadoras 
     que impacten positivamente en la vida de las personas. Con más de 4 años de experiencia, 
     me especializo en tecnologías modernas como React, Node.js y TypeScript.`,

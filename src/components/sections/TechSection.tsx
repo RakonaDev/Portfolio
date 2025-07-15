@@ -171,11 +171,11 @@ export default function TechSection() {
               <div className="text-xs text-gray-400">Tecnologías</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">5</div>
+              <div className="text-2xl font-bold text-primary">2</div>
               <div className="text-xs text-gray-400">Categorías</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">4+</div>
+              <div className="text-2xl font-bold text-primary">5+</div>
               <div className="text-xs text-gray-400">Años</div>
             </div>
           </div>
